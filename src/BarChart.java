@@ -23,7 +23,7 @@ public class BarChart {
         makeBar(-75,-135,num2,Color.blue);
         makeBar(0,-135,num3,Color.green);
         makeBar(75,-135,num4,Color.yellow);
-        line(-150,-135);
+        line(-150,-141);
         
     }
     
@@ -42,12 +42,14 @@ public class BarChart {
        
     }
     
-    public static void line(int xloc, int yloc){
-       
+    public static void line(int x,int y){
+       p.up();
+       p.move(x,y);
+       p.down();
        p.setColor(Color.black);
        p.setWidth(3);
-       p.setDirection(180);
-       p.move(225);
+       p.setDirection(0);
+       p.move(240);
        
    }
     
