@@ -13,27 +13,8 @@ public class PizzaCost2 extends javax.swing.JFrame {
         initComponents();
     }
 
-private void costActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        inches = Double.parseDouble(pbox.getText());
-        toppings = Integer.parseInt(tbox.getText());
-        totaltop = toppings * 0.75;
-        totalinch = inches * 0.50;
-        total = labourcost + gascost + totaltop + totalinch;
-        lcost.setText("$"+labourcost);
-        hucost.setText("$"+gascost);
-        tcost.setText("$"+totaltop);
-        bicost.setText("$"+totalinch);
-        totalcost.setText("$"+total);
-}
-private void resetActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        toppings = 0;
-        inches = 0;
-        labourcost=0;
-        total=0;
-        tcost.setText("$");
-        bicost.setText("$");
-        totalcost.setText("$");
-}
+
+
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -69,8 +50,18 @@ private void resetActionPerformed(java.awt.event.ActionEvent evt) {
         });
 
         cost.setText("Calculate Cost:");
+        cost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                costActionPerformed(evt);
+            }
+        });
 
         reset.setText("Reset");
+        reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetActionPerformed(evt);
+            }
+        });
 
         lcost.setText("Labour Cost (Fixed)");
 
@@ -167,6 +158,29 @@ private void resetActionPerformed(java.awt.event.ActionEvent evt) {
     private void tboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tboxActionPerformed
         
     }//GEN-LAST:event_tboxActionPerformed
+
+    private void costActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_costActionPerformed
+       inches = Double.parseDouble(pbox.getText());
+        toppings = Integer.parseInt(tbox.getText());
+        totaltop = toppings * 0.75;
+        totalinch = inches * 0.50;
+        total = labourcost + gascost + totaltop + totalinch;
+        ltotal.setText("$"+labourcost);
+        hutotal.setText("$"+gascost);
+        ttotal.setText("$"+totaltop);
+        bitotal.setText("$"+totalinch);
+        totalcost.setText("$"+total);
+    }//GEN-LAST:event_costActionPerformed
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        toppings = 0;
+        inches = 0;
+        labourcost=0;
+        total=0;
+        ttotal.setText("$");
+        bitotal.setText("$");
+        totalcost.setText("$");
+    }//GEN-LAST:event_resetActionPerformed
 
    
     public static void main(String args[]) {
