@@ -25,12 +25,12 @@ public class PowersChart {
         System.out.format("%20s","-----");
         
         
-        for (int x = 0; x <= 10; x+=1) {
+        //for (int x = 0; x <= 10; x+=1){
             
-            System.out.format("%5d", x);
-            System.out.format("%20s", ans);
+           // System.out.format("%5d", x);
+            //System.out.format("%20s", ans);
             
             
-        }
+        //}
     } 
 }
