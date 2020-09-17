@@ -23,13 +23,166 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="psize" max="32767" attributes="0"/>
+                      <Component id="tamount" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="cost" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="lcost" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="hucost" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="bicost" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tcost" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tlbl" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="reset" pref="67" max="32767" attributes="0"/>
+                  <Component id="tbox" max="32767" attributes="0"/>
+                  <Component id="pbox" max="32767" attributes="0"/>
+                  <Component id="totalcost" alignment="1" max="32767" attributes="0"/>
+                  <Component id="ltotal" max="32767" attributes="0"/>
+                  <Component id="hutotal" alignment="0" max="32767" attributes="0"/>
+                  <Component id="ttotal" alignment="0" max="32767" attributes="0"/>
+                  <Component id="bitotal" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="psize" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pbox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tamount" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tbox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="reset" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lcost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ltotal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="hucost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="hutotal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tcost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ttotal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bicost" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bitotal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tlbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="totalcost" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="psize">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter Size of Pizza:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tamount">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter Number of Toppings:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="pbox">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tbox">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tboxActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="cost">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculate Cost:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="reset">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reset"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lcost">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Labour Cost (Fixed)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="hucost">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Heat/Utilities (Fixed)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tcost">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Toppings Cost"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="bicost">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Base Ingredient Cost"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ltotal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="hutotal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ttotal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="bitotal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tlbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Total Cost"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="totalcost">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>
