@@ -1,30 +1,40 @@
-
 package Part2;
 
 import java.util.Scanner;
 
-
 public class EmployeePay {
 
-   
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int hours, ot_hours;
-        double wage = 15, ot_wage = 22.50, total_pay;
-        
-        System.out.print("Enter hours worked: ");
-        hours = s.nextInt();
-        
-        if (hours>40 && hours<=70) {
-            ot_hours= hours - 40;
-            total_pay = (wage * 40) +(ot_wage * ot_hours);
+        int hours = 0, ot_hours, employees;
+        double wage = 15, ot_wage = 22.50;
+        double total_pay = 0, ot_pay = 0, reg_pay = 0;
+
+        for (employees = 1; employees < 6; employees++) {
+            while(true){
+                System.out.print("Enter hours worked for employee " + employees + ": ");
+                hours = s.nextInt();
+                 if(hours >= 1 && hours<= 70)break;
+                 
+                 System.out.println("INVALID - try again");
+            }
+
+            if (hours > 40) {
+                ot_hours = hours - 40;
+                reg_pay = hours * wage;
+                ot_pay = ot_hours * ot_wage;
+                total_pay = ot_pay + reg_pay;
+            } else {
+                ot_hours = 0;
+                reg_pay = hours * wage;
+                ot_pay = ot_hours * ot_wage;
+                total_pay = ot_pay + reg_pay;
+            } 
+
+            System.out.println("Regular pay: $" + reg_pay);
+            System.out.println("Overtime pay: $" + ot_pay);
+            System.out.println("Total pay: $" + total_pay);
         }
-        else if(hours<40){
-            total_pay = (wage * hours);
-        }
-        else{
-            System.out.println("ERROR - MUST BE UNDER 70 hours");
-        }
+
     }
-    
 }
