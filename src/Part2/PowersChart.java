@@ -10,10 +10,10 @@ public class PowersChart {
     
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int num,x,ans;
+        int num,ans;
         System.out.print("Enter your number:  ");
         num = s.nextInt();
-        //System.out.println(Math.pow(x, 3)); 
+         
         
         
         //print column headings
@@ -22,15 +22,12 @@ public class PowersChart {
         
         
         System.out.format("%5s","--");
-        System.out.format("%20s","-----");
+        System.out.format("%20s\n","-----");
         
         
-        //for (int x = 0; x <= 10; x+=1){
-            
-           // System.out.format("%5d", x);
-            //System.out.format("%20s", ans);
-            
-            
-        //}
+        for (int x = 0; x <= num; x++){
+           System.out.format("%5s",x);
+           System.out.format("%20.0f\n",Math.pow(2,x));
+        }
     } 
 }
